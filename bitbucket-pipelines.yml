@@ -1,0 +1,31 @@
+# This is a sample build configuration for Python.
+# Check our guides at https://confluence.atlassian.com/x/x4UWN for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: python:3.7.3
+
+# pipelines:
+#   default:
+#     - step:
+#         caches:
+#           - pip
+#         script: # Modify the commands below to build your repository.
+#           - cd /src
+#           - pip install -r requirements.txt
+
+pipelines:
+  branches:
+    # deploy only when pushing to the master branch
+    master:
+      - step:
+          name: Deploy to prod
+          # this is the name of the Bitbucket Deployment
+          deployment: Production
+          caches:
+            # cache the Ansible installation
+            - pip
+          script:
+            - cat ./deploy.sh | ssh ubuntu@13.251.214.90
+            - echo "Deploy step finished"
+

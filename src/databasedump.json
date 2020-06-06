@@ -1,0 +1,452 @@
+[
+   {
+      "model": "api.AdSizes",
+      "pk": 1,
+      "fields": {
+         "ad_size_x": 10,
+         "ad_size_y": 20,
+         "content": "Lorem ipsum",
+         "meta": {
+            "breed": "collie",
+            "owner": "None"
+         },
+         "created_at": "2020-01-07 10:18:40.778",
+         "updated_at": "2020-01-07 10:18:40.778"
+      }
+   },
+   {
+      "model": "api.AdSizes",
+      "pk": 2,
+      "fields": {
+         "ad_size_x": 10,
+         "ad_size_y": 23,
+         "content": "Lorem ipsum",
+         "meta": {
+            "breed": "collie",
+            "owner": "None"
+         },
+         "created_at": "2020-01-07 10:18:40.778",
+         "updated_at": "2020-01-07 10:18:40.778"
+      }
+   },
+   {
+      "model": "api.AdGroups",
+      "pk": 1,
+      "fields": {
+         "group_name": "groupone",
+         "created_at": "2020-01-07 10:18:40.778",
+         "updated_at": "2020-01-07 10:18:40.778"
+      }
+   },
+   {
+      "model": "api.AdGroups",
+      "pk": 2,
+      "fields": {
+         "group_name": "grouptwo",
+         "created_at": "2020-01-07 10:18:40.778",
+         "updated_at": "2020-01-07 10:18:40.778"
+      }
+   },
+   {
+      "model": "api.Websites",
+      "pk": 1,
+      "fields": {
+         "user": 1,
+         "category": 1,
+         "domain": "https://google.com",
+         "status": "active",
+         "meta": {
+            "breed": "collie",
+            "owner": "None"
+         },
+         "created_at": "2020-01-07 10:18:40.778",
+         "updated_at": "2020-01-07 10:18:40.778"
+      }
+   },
+   {
+      "model": "api.Websites",
+      "pk": 2,
+      "fields": {
+         "user": 1,
+         "category": 1,
+         "domain": "https://google.com",
+         "status": "active",
+         "meta": {
+            "breed": "collie",
+            "owner": "None"
+         },
+         "created_at": "2020-01-07 10:18:40.778",
+         "updated_at": "2020-01-07 10:18:40.778"
+      }
+   },
+   {
+      "model": "api.WebsiteAds",
+      "pk": 1,
+      "fields": {
+         "adsizes": 1,
+         "settings": {
+            "breed": "collie",
+            "owner": "None"
+         },
+         "websites": 1
+      }
+   },
+   {
+      "model": "api.WebsiteAds",
+      "pk": 2,
+      "fields": {
+         "adsizes": 2,
+         "settings": {
+            "breed": "collie",
+            "owner": "None"
+         },
+         "websites": 2
+      }
+   },
+   {
+      "model": "api.Campaign",
+      "pk": 1,
+      "fields": {
+         "name": "Campaign one",
+         "startdate": "2020-01-07 10:18:40.778",
+         "enddate": "2020-01-07 10:18:40.778",
+         "status": "active",
+         "phone": "2837468234",
+         "meta": {
+            "breed": "collie",
+            "owner": "None"
+         },
+         "created_at": "2020-01-07 10:18:40.778",
+         "updated_at": "2020-01-07 10:18:40.778",
+         "blocked": {
+            "breed": "collie",
+            "owner": "None"
+         },
+         "overall": {
+            "breed": "collie",
+            "owner": "None"
+         },
+         "creator": 1,
+         "adgroup": 1
+      }
+   },
+   {
+      "model": "api.Campaign",
+      "pk": 2,
+      "fields": {
+         "name": "Campaign one",
+         "startdate": "2020-01-07 10:18:40.778",
+         "enddate": "2020-01-07 10:18:40.778",
+         "status": "active",
+         "phone": "2837468234",
+         "meta": {
+            "breed": "collie",
+            "owner": "None"
+         },
+         "created_at": "2020-01-07 10:18:40.778",
+         "updated_at": "2020-01-07 10:18:40.778",
+         "blocked": {
+            "breed": "collie",
+            "owner": "None"
+         },
+         "overall": {
+            "breed": "collie",
+            "owner": "None"
+         },
+         "creator": 1,
+         "adgroup": 1
+      }
+   },
+   {
+      "model": "api.CampaignReport",
+      "pk": 1,
+      "fields": {
+         "date": "2020-01-07 10:18:40.778",
+         "click": 12,
+         "impression": 765,
+         "avg_cpm": 65,
+         "avg_cpc": 54,
+         "created_at": "2020-01-07 10:18:40.778",
+         "updated_at": "2020-01-07 10:18:40.778",
+         "spend": 654,
+         "cpa": 65,
+         "campaign": 2
+      }
+   },
+   {
+      "model": "api.CampaignReport",
+      "pk": 2,
+      "fields": {
+         "date": "2020-01-07 10:18:40.778",
+         "click": 12,
+         "impression": 765,
+         "avg_cpm": 65,
+         "avg_cpc": 54,
+         "created_at": "2020-01-07 10:18:40.778",
+         "updated_at": "2020-01-07 10:18:40.778",
+         "spend": 654,
+         "cpa": 65,
+         "campaign": 2
+      }
+   },
+   {
+      "model": "api.PublisherReport",
+      "pk": 1,
+      "fields": {
+         "date": "2020-01-07 10:18:40.778",
+         "fill_rate": 56.65,
+         "revenue": 54.76,
+         "clicks": 4332,
+         "inventory": 65,
+         "impression": 43,
+         "country": {
+            "breed": "collie",
+            "owner": "None"
+         },
+         "created_at": "2020-01-07 10:18:40.778",
+         "updated_at": "2020-01-07 10:18:40.778",
+         "website": 1
+      }
+   },
+   {
+      "model": "api.PublisherReport",
+      "pk": 2,
+      "fields": {
+         "date": "2020-01-07 10:18:40.778",
+         "fill_rate": 56.65,
+         "revenue": 54.76,
+         "clicks": 4332,
+         "inventory": 65,
+         "impression": 43,
+         "country": {
+            "breed": "collie",
+            "owner": "None"
+         },
+         "created_at": "2020-01-07 10:18:40.778",
+         "updated_at": "2020-01-07 10:18:40.778",
+         "website": 1
+      }
+   },
+   {
+      "model": "api.Ads",
+      "pk": 1,
+      "fields": {
+         "ads_type": 1,
+         "content": "loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum ",
+         "settings": {
+            "breed": "collie",
+            "owner": "None"
+         },
+         "meta": {
+            "breed": "collie",
+            "owner": "None"
+         },
+         "price": 65465,
+         "ad_size": 1,
+         "ad_group": 1
+      }
+   },
+   {
+      "model": "api.Ads",
+      "pk": 2,
+      "fields": {
+         "ads_type": 1,
+         "content": "loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum ",
+         "settings": {
+            "breed": "collie",
+            "owner": "None"
+         },
+         "meta": {
+            "breed": "collie",
+            "owner": "None"
+         },
+         "price": 65465,
+         "ad_size": 1,
+         "ad_group": 1
+      }
+   },
+   {
+      "model": "api.AdServeSite",
+      "pk": 1,
+      "fields": {
+         "impression": 654,
+         "click": 543,
+         "avg_cpm": 543,
+         "avg_cpc": 32.8,
+         "campaign": 1,
+         "website": 2,
+         "created_at": "2020-01-07 10:18:40.778",
+         "updated_at": "2020-01-07 10:18:40.778"
+      }
+   },
+   {
+      "model": "api.AdServeSite",
+      "pk": 2,
+      "fields": {
+         "impression": 654,
+         "click": 543,
+         "avg_cpm": 543,
+         "avg_cpc": 32.8,
+         "campaign": 1,
+         "website": 2,
+         "created_at": "2020-01-07 10:18:40.778",
+         "updated_at": "2020-01-07 10:18:40.778"
+      }
+   },
+   {
+      "model": "api.AdCampaignDetails",
+      "pk": 1,
+      "fields": {
+         "countries": {
+            "breed": "collie",
+            "owner": "None"
+         },
+         "location": {
+            "breed": "collie",
+            "owner": "None"
+         },
+         "cities": {
+            "breed": "collie",
+            "owner": "None"
+         },
+         "networks": {
+            "breed": "collie",
+            "owner": "None"
+         },
+         "publisher": {
+            "breed": "collie",
+            "owner": "None"
+         },
+         "websites": {
+            "breed": "collie",
+            "owner": "None"
+         },
+         "categories": {
+            "breed": "collie",
+            "owner": "None"
+         },
+         "languages": {
+            "breed": "collie",
+            "owner": "None"
+         },
+         "ad_sizes": {
+            "breed": "collie",
+            "owner": "None"
+         },
+         "browsers": {
+            "breed": "collie",
+            "owner": "None"
+         },
+         "devices": {
+            "breed": "collie",
+            "owner": "None"
+         },
+         "campaign": 1,
+         "created_at": "2020-01-07 10:18:40.778",
+         "updated_at": "2020-01-07 10:18:40.778"
+      }
+   },
+   {
+      "model": "api.AdCampaignDetails",
+      "pk": 2,
+      "fields": {
+         "countries": {
+            "breed": "collie",
+            "owner": "None"
+         },
+         "location": {
+            "breed": "collie",
+            "owner": "None"
+         },
+         "cities": {
+            "breed": "collie",
+            "owner": "None"
+         },
+         "networks": {
+            "breed": "collie",
+            "owner": "None"
+         },
+         "publisher": {
+            "breed": "collie",
+            "owner": "None"
+         },
+         "websites": {
+            "breed": "collie",
+            "owner": "None"
+         },
+         "categories": {
+            "breed": "collie",
+            "owner": "None"
+         },
+         "languages": {
+            "breed": "collie",
+            "owner": "None"
+         },
+         "ad_sizes": {
+            "breed": "collie",
+            "owner": "None"
+         },
+         "browsers": {
+            "breed": "collie",
+            "owner": "None"
+         },
+         "devices": {
+            "breed": "collie",
+            "owner": "None"
+         },
+         "campaign": 1,
+         "created_at": "2020-01-07 10:18:40.778",
+         "updated_at": "2020-01-07 10:18:40.778"
+      }
+   },
+   {
+      "model": "api.Transactions",
+      "pk": 1,
+      "fields": {
+         "amount": 54354,
+         "from_type": "system",
+         "to_type": "users",
+         "created_at": "2020-01-07 10:18:40.778",
+         "updated_at": "2020-01-07 10:18:40.778",
+         "from_user": 1,
+         "to_user": 2
+      }
+   },
+   {
+      "model": "api.Transactions",
+      "pk": 2,
+      "fields": {
+         "amount": 54354,
+         "from_type": "system",
+         "to_type": "users",
+         "created_at": "2020-01-07 10:18:40.778",
+         "updated_at": "2020-01-07 10:18:40.778",
+         "from_user": 1,
+         "to_user": 2
+      }
+   },
+   {
+      "model": "api.TransactionRunningSum",
+      "pk": 1,
+      "fields": {
+         "amount": 5435,
+         "from_type": "users",
+         "created_at": "2020-01-07 10:18:40.778",
+         "updated_at": "2020-01-07 10:18:40.778",
+         "from_user": 1,
+         "to_user": 2
+      }
+   },
+   {
+      "model": "api.TransactionRunningSum",
+      "pk": 2,
+      "fields": {
+         "amount": 5435,
+         "from_type": "users",
+         "created_at": "2020-01-07 10:18:40.778",
+         "updated_at": "2020-01-07 10:18:40.778",
+         "from_user": 1,
+         "to_user": 2
+      }
+   }
+ ]
