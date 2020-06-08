@@ -49,3 +49,9 @@ class SpeakerSerializer(serializers.ModelSerializer):
         model = Speaker
         # depth = 1
         fields = '__all__'
+
+class ClaimSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Claim
+        # depth = 1
+        fields = '__all__'

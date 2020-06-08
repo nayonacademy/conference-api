@@ -18,4 +18,6 @@ urlpatterns = [
     path('report/<int:pk>/', ReportDetail.as_view()),
     path('speaker/list/', SpeakerList.as_view()),
     path('speaker/<int:pk>/', SpeakerDetail.as_view()),
+    path('claim/list/', ClaimList.as_view()),
+    path('claim/<int:pk>/', ClaimDetail.as_view()),
 ]

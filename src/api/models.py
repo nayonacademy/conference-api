@@ -72,3 +72,13 @@ class Report (models.Model):
 class Speaker (models.Model):
 	name = models.CharField(max_length=100)
 	position = models.CharField(max_length=100)
+
+class Claim(models.Model):
+	fullname = models.CharField(max_length=100)
+	email = models.CharField(max_length=100)
+	website = models.CharField(max_length=100)
+	conference_name = models.CharField(max_length=100)
+	street_address = models.TextField()
+	city = models.CharField(max_length=100)
+	state = models.CharField(max_length=100)
+	zipcode = models.CharField(max_length=100)

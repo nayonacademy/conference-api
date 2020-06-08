@@ -328,3 +328,47 @@ class SpeakerDetail(APIView):
         snippet = self.get_object(pk)
         snippet.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+class ClaimList(ListModelMixin, CreateModelMixin, GenericAPIView):
+    """
+    List all snippets, or create a new snippet.
+    """
+    # permission_classes = [IsAuthenticated]
+    queryset = Claim.objects.all()
+    serializer_class = ClaimSerializer
+
+    def get(self, request, *args, **kwargs):
+        return self.list(request, *args, *kwargs)
+
+    def post(self, request, *args, **kwargs):
+        return self.create(request, *args, **kwargs)
+
+
+class ClaimDetail(APIView):
+    """
+    Retrieve, update or delete a snippet instance.
+    """
+    # permission_classes = [IsAuthenticated]
+    def get_object(self, pk):
+        try:
+            return Claim.objects.get(pk=pk)
+        except Claim.DoesNotExist:
+            raise Http404
+
+    def get(self, request, pk, format=None):
+        snippet = self.get_object(pk)
+        serializer = ClaimSerializer(snippet, context={'request': request})
+        return Response(serializer.data)
+
+    def put(self, request, pk, format=None):
+        snippet = self.get_object(pk)
+        serializer = ClaimSerializer(snippet, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def delete(self, request, pk, format=None):
+        snippet = self.get_object(pk)
+        snippet.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
