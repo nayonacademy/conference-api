@@ -3,7 +3,6 @@
 .vscode
 */*.pyc
 */*/*.pyc
-*/migrations/*
 ./src/static/*
 /__pycache__
 */__pycache__/*
@@ -13,6 +12,4 @@
 **/.DS_Store
 venv
 src/db.sqlite3
-src/api/migrations/*
-src/jwtauth/migrations/*
 *.sqlite3

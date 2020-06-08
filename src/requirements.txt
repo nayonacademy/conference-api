@@ -29,4 +29,3 @@ boto3
 django-storages
 django-health-check
 django-jsonfield
-mysqlclient
