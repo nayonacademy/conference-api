@@ -5,9 +5,8 @@ RUN mkdir /src
 RUN mkdir /static
 WORKDIR /src
 
-RUN apt-get update -y && apt-get install -y default-libmysqlclient-dev python3-dev
-RUN pip install mysqlclient
 ADD ./src /src
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
+RUN python manage.py makemigrations && python manage.py migrate
 CMD gunicorn project.wsgi -b 0.0.0.0:8000

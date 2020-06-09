@@ -29,3 +29,4 @@ boto3
 django-storages
 django-health-check
 django-jsonfield
+psycopg2-binary

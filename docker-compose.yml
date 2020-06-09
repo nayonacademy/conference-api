@@ -2,7 +2,7 @@ version: '2'
 services: 
   nginx:
     image: nginx:alpine
-    container_name: manager_api_nginx
+    container_name: conference_api_nginx
     ports: 
       - "8000:8000"
     volumes: 
@@ -13,10 +13,10 @@ services:
       
   web:
     build: .
-    container_name: manager_api
+    container_name: conference_api
     volumes: 
       - ./src:/src
-    env_file: 
-      - ./.env
+    # env_file: 
+    #   - ./.env
     expose: 
       - "8000"
