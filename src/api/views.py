@@ -338,6 +338,7 @@ class ClaimList(ListModelMixin, CreateModelMixin, GenericAPIView):
     serializer_class = ClaimSerializer
 
     def get(self, request, *args, **kwargs):
+        print("hello")
         return self.list(request, *args, *kwargs)
 
     def post(self, request, *args, **kwargs):
