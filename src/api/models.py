@@ -14,6 +14,7 @@ class Category(models.Model):
         return self.name
 
 class ConfOwnProfile(models.Model): 
+	user = models.ForeignKey(User,on_delete=models.CASCADE)
 	reviews = models.CharField(max_length=100)
 	reads = models.CharField(max_length=100)
 	useful = models.CharField(max_length=100)
@@ -22,6 +23,8 @@ class ConfOwnProfile(models.Model):
 	picture = models.CharField(max_length=100)
 
 class Conference (models.Model):
+	user = models.ForeignKey(User,on_delete=models.CASCADE)
+	category = models.ForeignKey(Category, on_delete=models.CASCADE)
 	name = models.CharField(max_length=100)
 	website = models.CharField(max_length=100)
 	about = models.CharField(max_length=100)
@@ -36,18 +39,21 @@ class Conference (models.Model):
 	instagram = models.CharField(max_length=100)
 	organizerID = models.CharField(max_length=100)
 	locations = models.CharField(max_length=100)
-	rating = models.CharField(max_length=100)
 
 class ConferenceTest (models.Model):
 	name = models.CharField(max_length=100)
 	speaker = models.CharField(max_length=100)
 
 class Location (models.Model):
+	user = models.ForeignKey(User,on_delete=models.CASCADE)
+	conference = models.ForeignKey(Conference,on_delete=models.CASCADE)
 	name = models.CharField(max_length=100)
 	date = models.CharField(max_length=100)
 	time = models.CharField(max_length=100)
 
 class Rating (models.Model):
+	user = models.ForeignKey(User,on_delete=models.CASCADE)
+	conference = models.ForeignKey(Conference,on_delete=models.CASCADE)
 	rate = models.CharField(max_length=100)
 	comment = models.CharField(max_length=100)
 	caption = models.CharField(max_length=100)
