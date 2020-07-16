@@ -151,7 +151,9 @@ REST_FRAMEWORK = {
         "rest_framework_simplejwt.authentication.JWTAuthentication",
     ),
     "DEFAULT_SCHEMA_CLASS": "rest_framework.schemas.coreapi.AutoSchema",
-    "TEST_REQUEST_DEFAULT_FORMAT": "json"
+    "TEST_REQUEST_DEFAULT_FORMAT": "json",
+    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",
+    "PAGE_SIZE": 20
 }
 
 SWAGGER_SETTINGS = {
