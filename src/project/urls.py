@@ -38,4 +38,6 @@ urlpatterns = [
     path('api/', include('api.urls')),
     path('api/jwtauth/', include('jwtauth.urls'), name='jwtauth'),
     path('status', include('health_check.urls')),
+    path('rest-auth/', include('rest_auth.urls')),
+    path('rest-auth/registration/', include('rest_auth.registration.urls')),
 ]
