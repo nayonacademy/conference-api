@@ -125,6 +125,7 @@ class ConferenceList(ListModelMixin, CreateModelMixin, GenericAPIView):
         return self.list(request, *args, *kwargs)
 
     def post(self, request, *args, **kwargs):
+        print("conference create", kwargs, request)
         return self.create(request, *args, **kwargs)
 
 class ConferenceDetail(APIView):
@@ -199,6 +200,7 @@ class LocationDetail(APIView):
         snippet = self.get_object(pk)
         snippet.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+    
 class RatingList(ListModelMixin, CreateModelMixin, GenericAPIView):
     """
     List all snippets, or create a new snippet.
@@ -285,6 +287,7 @@ class ReportDetail(APIView):
         snippet = self.get_object(pk)
         snippet.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+    
 class SpeakerList(ListModelMixin, CreateModelMixin, GenericAPIView):
     """
     List all snippets, or create a new snippet.
