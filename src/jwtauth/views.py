@@ -3,6 +3,9 @@ from django.contrib.auth import get_user_model
 from rest_framework import permissions
 from rest_framework import response, decorators, permissions, status
 from rest_framework_simplejwt.tokens import RefreshToken
+from rest_auth.registration.views import SocialLoginView
+from allauth.socialaccount.providers.linkedin.views import *
+from allauth.socialaccount.providers.linkedin_oauth2.views import *
 from .serializers import UserCreateSerializer
 # Create your views here.
 
@@ -21,3 +24,7 @@ def registration(request):
         "access": str(refresh.access_token),
     }
     return response.Response(res, status.HTTP_201_CREATED)
+
+
+class LinkedinLogin(SocialLoginView):
+    adapter_class = LinkedInOAuth2Adapter
