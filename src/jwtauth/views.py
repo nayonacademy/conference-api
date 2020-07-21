@@ -37,7 +37,7 @@ class LinkedinLogin(SocialLoginView):
     
 class SocialLoginView(generics.GenericAPIView):
     """Log in using facebook"""
-    serializer_class = serializers.SocialSerializer
+    serializer_class = SocialSerializer
     permission_classes = [permissions.AllowAny]
  
     def post(self, request):
