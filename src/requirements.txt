@@ -33,3 +33,4 @@ psycopg2-binary
 django-rest-auth
 django-allauth
 djangorestframework-jwt
+django-rest-framework-social-oauth2

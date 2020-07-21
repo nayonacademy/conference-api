@@ -8,4 +8,5 @@ urlpatterns = [
     path("refresh/", TokenRefreshView.as_view(), name="token_refresh"),
     path('api/token/verify/', TokenVerifyView.as_view(), name='token_verify'),
     path('rest-auth/linkedin/', LinkedinLogin.as_view(), name='linkedin_login')
+    path('oauth/login/', SocialLoginView.as_view())
 ]
