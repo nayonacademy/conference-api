@@ -20,4 +20,5 @@ urlpatterns = [
     path('speaker/<int:pk>/', SpeakerDetail.as_view()),
     path('claim/', ClaimList.as_view()),
     path('claim/<int:pk>/', ClaimDetail.as_view()),
+    path('home/', Home.as_view()),
 ]

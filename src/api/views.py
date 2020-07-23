@@ -377,3 +377,16 @@ class ClaimDetail(APIView):
         snippet = self.get_object(pk)
         snippet.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+    
+    
+class Home(ListModelMixin, CreateModelMixin, GenericAPIView):
+    """
+    List all snippets, or create a new snippet.
+    """
+    # permission_classes = [IsAuthenticated]
+    queryset = Conference.objects.all()
+    serializer_class = ConferenceSerializer
+
+    def get(self, request, *args, **kwargs):
+        print("hello")
+        return self.list(request, *args, *kwargs)
