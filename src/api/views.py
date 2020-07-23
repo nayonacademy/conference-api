@@ -28,7 +28,7 @@ class CategoryList(ListModelMixin, CreateModelMixin, GenericAPIView):
     """
     List all snippets, or create a new snippet.
     """
-    # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
 
@@ -43,7 +43,7 @@ class CategoryDetail(APIView):
     """
     Retrieve, update or delete a snippet instance.
     """
-    # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     def get_object(self, pk):
         try:
             return Category.objects.get(pk=pk)
@@ -73,7 +73,7 @@ class ConfOwnProfileList(ListModelMixin, CreateModelMixin, GenericAPIView):
     """
     List all snippets, or create a new snippet.
     """
-    # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     queryset = ConfOwnProfile.objects.all()
     serializer_class = ConfOwnProfileSerializer
 
@@ -88,7 +88,7 @@ class ConfOwnProfileDetail(APIView):
     """
     Retrieve, update or delete a snippet instance.
     """
-    # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     def get_object(self, pk):
         try:
             return ConfOwnProfile.objects.get(pk=pk)
@@ -117,7 +117,7 @@ class ConferenceList(ListModelMixin, CreateModelMixin, GenericAPIView):
     """
     List all snippets, or create a new snippet.
     """
-    # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     queryset = Conference.objects.all()
     serializer_class = ConferenceSerializer
 
@@ -132,7 +132,7 @@ class ConferenceDetail(APIView):
     """
     Retrieve, update or delete a snippet instance.
     """
-    # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     def get_object(self, pk):
         try:
             return Conference.objects.get(pk=pk)
@@ -161,7 +161,7 @@ class LocationList(ListModelMixin, CreateModelMixin, GenericAPIView):
     """
     List all snippets, or create a new snippet.
     """
-    # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     queryset = Location.objects.all()
     serializer_class = LocationSerializer
 
@@ -176,7 +176,7 @@ class LocationDetail(APIView):
     """
     Retrieve, update or delete a snippet instance.
     """
-    # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     def get_object(self, pk):
         try:
             return Location.objects.get(pk=pk)
@@ -205,7 +205,7 @@ class RatingList(ListModelMixin, CreateModelMixin, GenericAPIView):
     """
     List all snippets, or create a new snippet.
     """
-    # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     queryset = Rating.objects.all()
     serializer_class = RatingSerializer
 
@@ -220,7 +220,7 @@ class RatingDetail(APIView):
     """
     Retrieve, update or delete a snippet instance.
     """
-    # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     def get_object(self, pk):
         try:
             return Rating.objects.get(pk=pk)
@@ -244,11 +244,12 @@ class RatingDetail(APIView):
         snippet = self.get_object(pk)
         snippet.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+    
 class ReportList(ListModelMixin, CreateModelMixin, GenericAPIView):
     """
     List all snippets, or create a new snippet.
     """
-    # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     queryset = Report.objects.all()
     serializer_class = ReportSerializer
 
@@ -263,7 +264,7 @@ class ReportDetail(APIView):
     """
     Retrieve, update or delete a snippet instance.
     """
-    # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     def get_object(self, pk):
         try:
             return Report.objects.get(pk=pk)
@@ -292,7 +293,7 @@ class SpeakerList(ListModelMixin, CreateModelMixin, GenericAPIView):
     """
     List all snippets, or create a new snippet.
     """
-    # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     queryset = Speaker.objects.all()
     serializer_class = SpeakerSerializer
 
@@ -307,7 +308,7 @@ class SpeakerDetail(APIView):
     """
     Retrieve, update or delete a snippet instance.
     """
-    # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     def get_object(self, pk):
         try:
             return Speaker.objects.get(pk=pk)
@@ -336,7 +337,7 @@ class ClaimList(ListModelMixin, CreateModelMixin, GenericAPIView):
     """
     List all snippets, or create a new snippet.
     """
-    # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     queryset = Claim.objects.all()
     serializer_class = ClaimSerializer
 
@@ -352,7 +353,7 @@ class ClaimDetail(APIView):
     """
     Retrieve, update or delete a snippet instance.
     """
-    # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     def get_object(self, pk):
         try:
             return Claim.objects.get(pk=pk)

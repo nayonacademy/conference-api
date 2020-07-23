@@ -17,7 +17,7 @@ def registration(request):
     user = serializer.save()
     refresh = RefreshToken.for_user(user)
     res = {
-        "refresh": str(refresh),
         "access": str(refresh.access_token),
+        "refresh": str(refresh),
     }
     return response.Response(res, status.HTTP_201_CREATED)
