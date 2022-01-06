@@ -21,7 +21,7 @@ sqlparse==0.3.0
 uritemplate==3.0.1
 urllib3==1.25.8
 gunicorn==19.9.0
-celery==4.3.0
+celery==5.2.2
 redis==3.2.1
 django-cors-headers
 drf-yasg
